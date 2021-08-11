@@ -109,7 +109,7 @@ $code=<<___;
 @ Silence ARMv8 deprecated IT instruction warnings. This file is used by both
 @ ARMv7 and ARMv8 processors and does not use ARMv8 instructions. (ARMv8 PMULL
 @ instructions are in aesv8-armx.pl.)
-.arch  armv7-a
+#.arch  armv7-a
 
 .text
 #if defined(__thumb2__) || defined(__clang__)
@@ -173,7 +173,7 @@ ___
 
 $code.=<<___;
 #if __ARM_MAX_ARCH__>=7
-.arch	armv7-a
+#.arch	armv7-a
 .fpu	neon
 
 .global	gcm_init_neon

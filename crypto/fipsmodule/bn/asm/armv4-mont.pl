@@ -101,7 +101,7 @@ $code=<<___;
 
 @ Silence ARMv8 deprecated IT instruction warnings. This file is used by both
 @ ARMv7 and ARMv8 processors and does not use ARMv8 instructions.
-.arch  armv7-a
+#.arch  armv7-a
 
 .text
 #if defined(__thumb2__)
@@ -310,7 +310,7 @@ my ($tinptr,$toutptr,$inner,$outer,$bnptr)=map("r$_",(6..11));
 
 $code.=<<___;
 #if __ARM_MAX_ARCH__>=7
-.arch	armv7-a
+#.arch	armv7-a
 .fpu	neon
 
 .type	bn_mul8x_mont_neon,%function

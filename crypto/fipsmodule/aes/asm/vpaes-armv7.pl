@@ -117,7 +117,7 @@ my $code = "";
 $code.=<<___;
 .syntax	unified
 
-.arch	armv7-a
+#.arch	armv7-a
 .fpu	neon
 
 #if defined(__thumb2__)

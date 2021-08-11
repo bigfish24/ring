@@ -212,7 +212,7 @@ $code=<<___;
 
 @ Silence ARMv8 deprecated IT instruction warnings. This file is used by both
 @ ARMv7 and ARMv8 processors and does not use ARMv8 instructions.
-.arch  armv7-a
+#.arch  armv7-a
 
 #ifdef __ARMEL__
 # define LO 0
@@ -610,7 +610,7 @@ ___
 
 $code.=<<___;
 #if __ARM_MAX_ARCH__>=7
-.arch	armv7-a
+#.arch	armv7-a
 .fpu	neon
 
 .type	sha512_block_data_order_neon,%function

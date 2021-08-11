@@ -186,7 +186,7 @@ $code=<<___;
 @ Silence ARMv8 deprecated IT instruction warnings. This file is used by both
 @ ARMv7 and ARMv8 processors. It does have ARMv8-only code, but those
 @ instructions are manually-encoded. (See unsha256.)
-.arch  armv7-a
+#.arch  armv7-a
 
 .text
 #if defined(__thumb2__)
@@ -479,7 +479,7 @@ sub body_00_15 () {
 
 $code.=<<___;
 #if __ARM_MAX_ARCH__>=7
-.arch	armv7-a
+#.arch	armv7-a
 .fpu	neon
 
 .type	sha256_block_data_order_neon,%function

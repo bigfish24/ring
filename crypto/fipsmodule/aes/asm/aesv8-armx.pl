@@ -60,7 +60,7 @@ $code=<<___;
 ___
 $code.=".arch	armv8-a+crypto\n"			if ($flavour =~ /64/);
 $code.=<<___						if ($flavour !~ /64/);
-.arch	armv7-a	// don't confuse not-so-latest binutils with argv8 :-)
+#.arch	armv7-a	// don't confuse not-so-latest binutils with argv8 :-)
 .fpu	neon
 .code	32
 #undef	__thumb2__
